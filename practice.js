@@ -17,7 +17,14 @@ var name = 'Tyler';
   If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 */
 
-//Code Here
+function isTyler(name){
+  if(name === "Tyler"){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 
 
@@ -27,7 +34,11 @@ var name = 'Tyler';
   Create a function called getName that uses prompt() to prompt the user for their name and then returns the given name.
 */
 
-//Code Here
+function getName(){
+  let myName = prompt("What is your name?");
+
+  return myName;
+}
 
 
 
@@ -40,7 +51,10 @@ var name = 'Tyler';
   Example: "Welcome, Bob Joe"
 */
 
-//Code Here
+function welcome(){
+alert( "Welcome, " + getName());
+
+}
 
 
 
@@ -52,6 +66,7 @@ var name = 'Tyler';
 
 //Answer Here
 
+// parameters are placeholders in the functions structor and arguments are the values used when calling the function.
 
 
 ////////// PROBLEM 5 //////////
@@ -62,6 +77,8 @@ var name = 'Tyler';
 
 //Answer Here
 
+// undefined, null, false, NaN. We can check by using (!value)
+
 
 
 ////////// PROBLEM 6 //////////
@@ -70,7 +87,9 @@ var name = 'Tyler';
   Create a function called myName that returns your name
 */
 
-//Code Here
+let myName = ()=>{
+  return "Jonathan"
+};
   
 
 
@@ -80,13 +99,14 @@ var name = 'Tyler';
 
 //Code Here
 
+let newMyName = myName;
 
 
 /*
   Now alert the result of invoking newMyName
 */
 
-// Code Here
+alert(newMyName);
 
 
 
@@ -96,7 +116,11 @@ var name = 'Tyler';
   Create a function called outerFn which returns an anonymous function which returns your name.
 */
 
-//Code Here
+let outerFn = ()=>{
+  return function(){
+    return "Jonathan";
+  }
+}
 
 
 
@@ -104,7 +128,7 @@ var name = 'Tyler';
   Now save the result of invoking outerFn into a variable called innerFn.
 */
 
-//Code Here
+let innerFn = outerFn();
 
 
 
@@ -112,4 +136,4 @@ var name = 'Tyler';
   Now invoke innerFn.
 */
 
-// Code Here
+innerFn();
